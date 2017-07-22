@@ -1,80 +1,28 @@
+title: tegarnization's blog
+description: A Personal Blog
 
-##########################################
-#     Change these variables !important
-##########################################
-
-# Set this for Copyright in the footer
-owner: Tegar Aji Pangestu
-
-# Optional quote in the footer
-# To disable set enable to false
-quote:
-  enable: true
-  quote: Be kind, for everyone you meet is fighting a hard battle
-  author: Plato
-
-# Set this to your main site title. If page doesn't have its own title,
-# then this title will be used.
-title: Tegar's Blog
-
-
-# Following needed for disqus integration
-# Set your 'disqus' account name
-disqus:
-
-# Uncomment if deployed locally
-#url: https://localhost:4000
-
-# Set your host if deployed not locally
-# For example "https://yourGitHub.github.io"
 url: https://blog.tegarnization.me
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
 
-# Change this to your base URL starting with forward slash if site is in gh-pages branch
-# For example /branchName
-# NOTE! only change if site is NOT in master's branch
-baseurl:
-
-# Change this to your google analytics ID
-google_analytics:
-
-# Contact form pupublic key
-contact_PK:
-
-##########################################
-#          Optional variables
-##########################################
-
-# Set maximum posts per page
+markdown: kramdown
+highlighter: rouge
+gems: [jekyll-paginate]
 paginate: 5
 
-# Set permalink
-permalink: /:categories/:title
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About
+   url: /about
+ - title: Contact
+   url: /contact
 
-# MathJax support
-math: false
+social:
+   github: brianmaierjr
+   twitter: brianmaierjr
+   facebook: brianmaierjr
+   email: brimaidesigns@gmail.com
 
-collections:
-- definitions
-
-##########################################
-#          Do not change these variables
-##########################################
-
-include:
-  - _pages
-
-sass:
-  sass_dir: _sass
-sass:
-    style: compressed
-
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap # add /sitemap.xml file
-
-paginate_path: /_pages/page:num
-
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input: GFM
+google_analytics: "UA-58263416-1"

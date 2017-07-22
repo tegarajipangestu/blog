@@ -1,12 +1,14 @@
-<header>
-    <nav id="main-nav">
-        <ul>
-            <li><a class="fancy-nav" href="{{ site.baseurl }}/index.html">home</a></li>
-            {% for link in site.categories %}
-            <li><a class="fancy-nav" href="{{ site.baseurl }}/categories/{{ link | first | downcase }}">{{ link | first
-                }}</a></li>
-            {% endfor %}
-            <li><a class="fancy-nav" href="{{ site.baseurl }}/pages/about.html">about</a></li>
-        </ul>
-    </nav>
-</header>
+ <div class="header">
+     <div class="container">
+         <h1 class="logo"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+         <nav class="nav-collapse">
+             <ul class="noList">
+                 {% for link in site.navigation %}{% assign current = nil %}{% if page.url contains link.url %}{% assign current = 'current' %}{% endif %}
+                 <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+                     <a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
+                 </li>
+                 {% endfor %}
+             </ul>
+         </nav>
+     </div>
+ </div><!-- end .header -->
